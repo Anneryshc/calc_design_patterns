@@ -1,25 +1,16 @@
 from app.commands import Command
-import logging
+
 
 class DivisionCommand(Command):
-    """
-    A command to perform division of two numbers.
-    """
-
     def execute(self):
-        """
-        Executes the division command.
-        """
         try:
             num1 = float(input("Enter the first number: "))
             num2 = float(input("Enter the second number: "))
             result = num1 / num2
-            print(f"The division of {num1} and {num2} is : {result}")
+            print(f"the Division {num1} and {num2} is : {result}")
         except ValueError:
-            logging.error("Invalid input: Please enter valid numbers.")
-        except ZeroDivisionError:
-            logging.error("Error: Division by zero.")
+            print("Error: Please enter valid numbers.")
 
+# Llama a la función para ejecutarla directamente al importar el módulo
 if __name__ == "__main__":
     DivisionCommand().execute()
-    

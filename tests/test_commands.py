@@ -10,6 +10,8 @@ from app.plugins.subtraction import SubtractionCommand
 from app.plugins.multiplication import Multiplicationcommand
 from app.plugins.division import DivisionCommand
 
+
+
 @pytest.fixture
 def mock_input(monkeypatch):
     """Fixture para la entrada de usuario simulada."""
@@ -49,7 +51,8 @@ def test_addition_command(capfd, monkeypatch):
     captured = capfd.readouterr()
 
     # Verificamos si la suma se realizó correctamente y el resultado se imprimió
-    assert "La suma de 5.0 y 7.0 es: 12.0" in captured.out, "The addition was not done correctly"
+    assert "The addition of 5.0 and 7.0 is : 12.0\n" in captured.out, "The addition was not done correctly"
+
 
 def test_subtraction_command_valid_input(capfd, monkeypatch):
     """Test para el comando de resta con entrada válida."""

@@ -1,6 +1,6 @@
 import sys
-from app.commands import Command
 import logging
+from app.commands import Command
 
 class DiscordCommand(Command):
     """
@@ -21,4 +21,4 @@ class DiscordCommand(Command):
 
 if __name__ == "__main__":
     DiscordCommand().execute()
-    
+
