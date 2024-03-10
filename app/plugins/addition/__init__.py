@@ -1,17 +1,24 @@
 import sys
 from app.commands import Command
-
+import logging
 
 class DiscordCommand(Command):
-    def execute(self):
-        try:
-            num1 = float(input("Ingrese el primer número: "))
-            num2 = float(input("Ingrese el segundo número: "))
-            result = num1 + num2
-            print(f"La suma de {num1} y {num2} es: {result}")
-        except ValueError:
-            print("Error: Por favor ingrese números válidos.")
+    """
+    A command to perform addition of two numbers.
+    """
 
-# Llama a la función para ejecutarla directamente al importar el módulo
+    def execute(self):
+        """
+        Executes the addition command.
+        """
+        try:
+            num1 = float(input("Enter the first number: "))
+            num2 = float(input("Enter the second number: "))
+            result = num1 + num2
+            print(f"The addition of {num1} and {num2} is : {result}")
+        except ValueError:
+            logging.error("Invalid input: Please enter valid numbers.")
+
 if __name__ == "__main__":
     DiscordCommand().execute()
+    
