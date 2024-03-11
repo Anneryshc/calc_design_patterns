@@ -13,7 +13,6 @@ import logging
 from app.plugins.menu import show_menu
 
 
-
 @pytest.fixture
 def mock_input(monkeypatch):
     """Fixture para la entrada de usuario simulada."""
