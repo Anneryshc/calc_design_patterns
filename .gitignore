@@ -5,3 +5,4 @@
 venv/
 /plugins
 .env
+__pycache__/
