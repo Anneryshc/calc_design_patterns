@@ -9,6 +9,8 @@ from app.plugins.addition import DiscordCommand
 from app.plugins.subtraction import SubtractionCommand
 from app.plugins.multiplication import Multiplicationcommand
 from app.plugins.division import DivisionCommand
+import logging
+from app.plugins.menu import show_menu
 
 
 
@@ -19,24 +21,26 @@ def mock_input(monkeypatch):
     monkeypatch.setattr('sys.stdin', user_input)
     return user_input
 
-def test_app_menu_command(capfd, monkeypatch):
-    """Test que verifica el manejo correcto del comando 'menu'."""
-    # Simulamos que el usuario ingresa 'menu' seguido de 'exit'
-    inputs = iter(['menu', 'exit'])
-    monkeypatch.setattr('builtins.input', lambda _: next(inputs))
+def test_app_menu_command(capsys, caplog):
+    # Configurar el logger
+    caplog.set_level(logging.INFO)
 
-    app = App()
-    with pytest.raises(SystemExit):
-        app.start()
+    # Ejecutar la función show_menu()
+    show_menu()
 
-    # Capturamos la salida de la aplicación
-    captured = capfd.readouterr()
+    # Capturar la salida y los registros
+    captured = capsys.readouterr()
+    logs = caplog.text
 
-    # Verificamos si la aplicación mostró correctamente el menú
-    assert "Available commands" in captured.out, "The menu was not displayed as expected"
-
-    # Verificamos si la aplicación salió correctamente
-    assert "Exiting..." in captured.out, "The app did not exit as expected"
+    # Verificar si la salida y los registros contienen los comandos esperados
+    assert "Available commands:" in logs
+    assert " - addition" in captured.out
+    assert " - division" in captured.out
+    assert " - exit" in captured.out
+    assert " - goodbye" in captured.out
+    assert " - menu" in captured.out
+    assert " - multiplication" in captured.out
+    assert " - subtraction" in captured.out
 
 def test_addition_command(capfd, monkeypatch):
     """Test para el comando de suma."""
