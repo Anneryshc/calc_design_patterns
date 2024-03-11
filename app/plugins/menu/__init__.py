@@ -1,6 +1,7 @@
-import sys
 # menu/__init__.py
-import os 
+import os
+import sys
+import logging  # Agregar logging
 from app.commands import CommandHandler
 from app.commands import Command
 
@@ -14,6 +15,11 @@ def show_menu():
     # Obtener la lista de carpetas en la carpeta 'plugins'
     plugin_folders = [folder for folder in os.listdir('app/plugins') if os.path.isdir(os.path.join('app/plugins', folder))]
 
-    print("Available commands:")
+    # Registrar el encabezado "Available commands:"
+    logging.info("Available commands:")
+
+    # Escribir los comandos del menú en sys.stdout
     for plugin_folder in plugin_folders:
-        print(f" - {plugin_folder}")
+        command = f" - {plugin_folder}"
+        sys.stdout.write(command + '\n')
+        logging.info(command)
