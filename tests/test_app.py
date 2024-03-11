@@ -1,17 +1,16 @@
 """
-Module docstring: Test commands
+Test de comandos.
 """
 
+import logging
 import pytest
 from app import App
-import logging
 
 @pytest.fixture
 def app():
     """Fixture para instanciar la aplicación."""
     return App()
 
-# Define la función de prueba para verificar que la aplicación pueda iniciar y salir correctamente
 def test_app_start_exit_command(app, monkeypatch, caplog):
     """Test que verifica que la aplicación inicie y salga correctamente."""
     # Configura el nivel de logging para capturar registros
@@ -19,13 +18,11 @@ def test_app_start_exit_command(app, monkeypatch, caplog):
 
     # Simula que el usuario ingresa 'exit'
     monkeypatch.setattr('builtins.input', lambda _: 'exit')
-    
     # Ejecuta la aplicación y verifica que se lance la excepción SystemExit
     with pytest.raises(SystemExit):
         app.start()
 
     # Captura los registros generados durante la ejecución
     logs = caplog.text
-    
     # Verifica si la salida y los registros contienen el mensaje de salida esperado
     assert "Exiting..." in logs

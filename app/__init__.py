@@ -6,6 +6,8 @@ from app.plugins.menu import MenuCommand
 import logging
 from dotenv import load_dotenv
 import os
+from logging.handlers import RotatingFileHandler  # Importar RotatingFileHandler para rotación de logs
+
 
 class App:
     def __init__(self):
@@ -14,8 +16,14 @@ class App:
         self.user_input = None  # Inicializar la entrada del usuario
 
         # Configurar loggings
-        logging.basicConfig(level=logging.INFO)
+        logging.basicConfig(filename='app.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
         self.logger = logging.getLogger(__name__)
+
+        # Configurar un manejador adicional para mostrar mensajes de nivel INFO en la consola
+        console_handler = logging.StreamHandler()
+        console_handler.setLevel(logging.INFO)
+        console_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+        self.logger.addHandler(console_handler)
 
         # Cargar variables de entorno desde el archivo .env
         load_dotenv()
@@ -45,6 +53,7 @@ class App:
                 self.user_input = None  # Restablecer la entrada para la próxima iteración
             else:
                 user_input = input(">>> ").strip()
+                self.logger.info(f"User input: {user_input}")  # Registro de la acción del usuario
             if user_input == 'exit':
                 self.logger.info("Exiting...")
                 raise SystemExit  # Lanzar excepción SystemExit

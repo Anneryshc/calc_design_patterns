@@ -1,0 +1,82 @@
+2024-03-10 23:32:07,001 - INFO - Exiting...
+2024-03-10 23:32:58,482 - INFO - Exiting...
+2024-03-10 23:35:35,730 - INFO - Registered command: addition
+2024-03-10 23:35:35,744 - INFO - Registered command: division
+2024-03-10 23:35:35,758 - INFO - Registered command: exit
+2024-03-10 23:35:35,766 - INFO - Registered command: goodbye
+2024-03-10 23:35:35,768 - INFO - Registered command: menu
+2024-03-10 23:35:35,778 - INFO - Registered command: multiplication
+2024-03-10 23:35:35,787 - INFO - Registered command: subtraction
+2024-03-10 23:35:35,789 - INFO - Registered command: menu
+2024-03-10 23:37:18,601 - INFO - Exiting...
+2024-03-10 23:39:17,110 - INFO - User input: menu
+2024-03-10 23:39:17,111 - INFO - Available commands:
+2024-03-10 23:39:17,114 - INFO -  - addition
+2024-03-10 23:39:17,114 - INFO -  - division
+2024-03-10 23:39:17,116 - INFO -  - exit
+2024-03-10 23:39:17,117 - INFO -  - goodbye
+2024-03-10 23:39:17,117 - INFO -  - menu
+2024-03-10 23:39:17,118 - INFO -  - multiplication
+2024-03-10 23:39:17,118 - INFO -  - subtraction
+2024-03-10 23:39:17,119 - INFO -  - __pycache__
+2024-03-10 23:39:27,210 - INFO - User input: addition
+2024-03-10 23:42:14,017 - INFO - User input: exit
+2024-03-10 23:42:14,017 - INFO - Exiting...
+2024-03-10 23:42:20,161 - INFO - User input: menu
+2024-03-10 23:42:20,164 - INFO - Available commands:
+2024-03-10 23:42:20,165 - INFO -  - addition
+2024-03-10 23:42:20,165 - INFO -  - division
+2024-03-10 23:42:20,166 - INFO -  - exit
+2024-03-10 23:42:20,166 - INFO -  - goodbye
+2024-03-10 23:42:20,168 - INFO -  - menu
+2024-03-10 23:42:20,168 - INFO -  - multiplication
+2024-03-10 23:42:20,168 - INFO -  - subtraction
+2024-03-10 23:42:20,168 - INFO -  - __pycache__
+2024-03-10 23:42:24,121 - INFO - User input: addition
+2024-03-10 23:42:40,843 - ERROR - Invalid input: Please enter valid numbers.
+2024-03-10 23:42:49,913 - INFO - User input: exit
+2024-03-10 23:42:49,913 - INFO - Exiting...
+2024-03-10 23:42:53,671 - INFO - Registered command: addition
+2024-03-10 23:42:53,671 - INFO - Registered command: division
+2024-03-10 23:42:53,671 - INFO - Registered command: exit
+2024-03-10 23:42:53,671 - INFO - Registered command: goodbye
+2024-03-10 23:42:53,671 - INFO - Registered command: menu
+2024-03-10 23:42:53,681 - INFO - Registered command: multiplication
+2024-03-10 23:42:53,683 - INFO - Registered command: subtraction
+2024-03-10 23:42:53,684 - INFO - Registered command: menu
+2024-03-10 23:43:43,525 - INFO - Exiting...
+2024-03-10 23:43:51,892 - INFO - User input: menu
+2024-03-10 23:43:51,894 - INFO - Available commands:
+2024-03-10 23:43:51,894 - INFO -  - addition
+2024-03-10 23:43:51,894 - INFO -  - division
+2024-03-10 23:43:51,898 - INFO -  - exit
+2024-03-10 23:43:51,898 - INFO -  - goodbye
+2024-03-10 23:43:51,899 - INFO -  - menu
+2024-03-10 23:43:51,899 - INFO -  - multiplication
+2024-03-10 23:43:51,900 - INFO -  - subtraction
+2024-03-10 23:43:51,900 - INFO -  - __pycache__
+2024-03-10 23:43:56,336 - INFO - User input: addition
+2024-03-10 23:45:37,497 - INFO - User input: exit
+2024-03-10 23:45:37,506 - INFO - Exiting...
+2024-03-10 23:45:39,541 - INFO - Registered command: addition
+2024-03-10 23:45:39,545 - INFO - Registered command: division
+2024-03-10 23:45:39,545 - INFO - Registered command: exit
+2024-03-10 23:45:39,551 - INFO - Registered command: goodbye
+2024-03-10 23:45:39,551 - INFO - Registered command: menu
+2024-03-10 23:45:39,554 - INFO - Registered command: multiplication
+2024-03-10 23:45:39,556 - INFO - Registered command: subtraction
+2024-03-10 23:45:39,557 - INFO - Registered command: menu
+2024-03-10 23:48:56,618 - INFO - Exiting...
+2024-03-10 23:49:01,650 - INFO - User input: menu
+2024-03-10 23:49:01,651 - INFO - Available commands:
+2024-03-10 23:49:01,651 - INFO -  - addition
+2024-03-10 23:49:01,654 - INFO -  - division
+2024-03-10 23:49:01,654 - INFO -  - exit
+2024-03-10 23:49:01,656 - INFO -  - goodbye
+2024-03-10 23:49:01,656 - INFO -  - menu
+2024-03-10 23:49:01,656 - INFO -  - multiplication
+2024-03-10 23:49:01,657 - INFO -  - subtraction
+2024-03-10 23:49:01,658 - INFO -  - __pycache__
+2024-03-10 23:49:10,798 - INFO - User input: addition
+2024-03-10 23:50:16,655 - INFO - User input: exit
+2024-03-10 23:50:16,660 - INFO - Exiting...
